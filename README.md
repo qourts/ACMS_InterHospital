@@ -1,17 +1,19 @@
-# ACMS Inter-Hospital Player Portal — v2.27
+# ACMS Player Portal v2.29
 
-GitHub Pages deployment package for the ACMS Player Portal.
+GitHub Pages deployment package for the ACMS Inter-Hospital Pickleball Tournament Player Portal.
 
-## Included
-- `index.html` — Player Portal
-- `acms-sync-config.json` — Supabase browser configuration
-- `.nojekyll` — GitHub Pages compatibility
-
-## v2.27 changes
-- Find My Matches, Major Sponsors and Secondary Sponsors are now available on **all Player Portal pages**: My Matches, Schedule, Standings, Live, Playoffs and Hospital Championship.
-- Added a Player Portal QR code below Secondary Sponsors.
-- QR destination: `https://qourts.github.io/ACMS_InterHospital/`
-- Mobile layouts keep sponsor sections and QR accessible instead of hiding them.
+## Changes in v2.29
+- Uses the full available desktop viewport instead of limiting the application to a 1460px content width.
+- Narrows the shared sponsor/search rail slightly so the tournament workspace receives more horizontal space.
+- Reworks the Player Portal QR card into a compact horizontal layout with a much smaller QR code.
+- Keeps Find My Matches, Major Sponsors, Secondary Sponsors and the QR card available across all Player Portal pages.
+- Preserves the existing Supabase live-sync configuration.
 
 ## Deploy
-Upload these files directly to the root of the `ACMS_InterHospital` repository and replace the existing files.
+Upload the files in this folder directly to the root of the `ACMS_InterHospital` GitHub repository.
+
+The browser-safe Supabase publishable key may be deployed with this Player Portal. Never add a Supabase secret key, database password or the private ACMS `acms_...` publish key to this repository.
+
+
+## v2.29 layout update
+On desktop, the Player Portal QR card now expands to fill the remaining height of the shared left rail. The QR is centered and scales up within that available space, eliminating the unused vertical gap below the sponsor cards. Mobile/tablet behavior remains compact.
